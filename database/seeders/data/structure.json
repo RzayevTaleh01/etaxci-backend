@@ -1,0 +1,410 @@
+{
+  "title": {
+    "az": "Elmi şura",
+    "en": "Scientific Council",
+    "ru": "Научный совет"
+  },
+  "type": "council",
+  "children": [
+    {
+      "title": {
+        "az": "Direktor",
+        "en": "Director",
+        "ru": "Директор"
+      },
+      "type": "director",
+      "children": [
+        {
+          "title": {
+            "az": "Elmi işlər üzrə direktor müavini",
+            "en": "Deputy Director for Scientific Affairs",
+            "ru": "Заместитель директора по научной работе"
+          },
+          "type": "deputy",
+          "children": [
+            {
+              "title": {
+                "az": "Elmi-tədqiqat departamenti",
+                "en": "Research Department",
+                "ru": "Научно-исследовательский департамент"
+              },
+              "type": "department",
+              "children": [
+                {
+                  "title": {
+                    "az": "Ftiziatriya şöbəsi",
+                    "en": "Phthisiology Unit",
+                    "ru": "Отделение фтизиатрии"
+                  },
+                  "type": "unit"
+                },
+                {
+                  "title": {
+                    "az": "Pulmonologiya şöbəsi",
+                    "en": "Pulmonology Unit",
+                    "ru": "Отделение пульмонологии"
+                  },
+                  "type": "unit"
+                }
+              ]
+            },
+            {
+              "title": {
+                "az": "Təlim və tədqiqatlar departamenti",
+                "en": "Training and Research Department",
+                "ru": "Департамент обучения и исследований"
+              },
+              "type": "department",
+              "children": [
+                {
+                  "title": {
+                    "az": "Təlimlərin təşkili şöbəsi",
+                    "en": "Training Organization Unit",
+                    "ru": "Отдел организации обучения"
+                  },
+                  "type": "unit"
+                },
+                {
+                  "title": {
+                    "az": "Elmi nəşrlər şöbəsi",
+                    "en": "Scientific Publications Unit",
+                    "ru": "Отдел научных изданий"
+                  },
+                  "type": "unit"
+                }
+              ]
+            },
+            {
+              "title": {
+                "az": "Beynəlxalq əlaqələr departamenti",
+                "en": "International Relations Department",
+                "ru": "Департамент международных связей"
+              },
+              "type": "department",
+              "children": [
+                {
+                  "title": {
+                    "az": "Beynəlxalq layihələr şöbəsi",
+                    "en": "International Projects Unit",
+                    "ru": "Отдел международных проектов"
+                  },
+                  "type": "unit"
+                },
+                {
+                  "title": {
+                    "az": "Xarici tərəfdaşlarla iş şöbəsi",
+                    "en": "Foreign Partners Unit",
+                    "ru": "Отдел по работе с зарубежными партнёрами"
+                  },
+                  "type": "unit"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": {
+            "az": "Müalicə işi üzrə direktor müavini",
+            "en": "Deputy Director for Treatment",
+            "ru": "Заместитель директора по лечебной работе"
+          },
+          "type": "deputy",
+          "children": [
+            {
+              "title": {
+                "az": "Klinik departament",
+                "en": "Clinical Department",
+                "ru": "Клинический департамент"
+              },
+              "type": "department",
+              "children": [
+                {
+                  "title": {
+                    "az": "Stasionar şöbə",
+                    "en": "Inpatient Unit",
+                    "ru": "Стационарное отделение"
+                  },
+                  "type": "unit"
+                },
+                {
+                  "title": {
+                    "az": "Ambulator şöbə",
+                    "en": "Outpatient Unit",
+                    "ru": "Амбулаторное отделение"
+                  },
+                  "type": "unit"
+                }
+              ]
+            },
+            {
+              "title": {
+                "az": "Diaqnostika departamenti",
+                "en": "Diagnostics Department",
+                "ru": "Департамент диагностики"
+              },
+              "type": "department",
+              "children": [
+                {
+                  "title": {
+                    "az": "Laborator şöbəsi",
+                    "en": "Laboratory Unit",
+                    "ru": "Лабораторное отделение"
+                  },
+                  "type": "unit"
+                },
+                {
+                  "title": {
+                    "az": "Funksional diaqnostika şöbəsi",
+                    "en": "Functional Diagnostics Unit",
+                    "ru": "Отделение функциональной диагностики"
+                  },
+                  "type": "unit"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": {
+            "az": "İctimaiyyətlə əlaqələr və kommunikasiya departamenti",
+            "en": "Public Relations and Communications Department",
+            "ru": "Департамент по связям с общественностью и коммуникациям"
+          },
+          "type": "department",
+          "children": [
+            {
+              "title": {
+                "az": "İctimaiyyətlə əlaqələr şöbəsi",
+                "en": "Public Relations Unit",
+                "ru": "Отдел по связям с общественностью"
+              },
+              "type": "unit"
+            },
+            {
+              "title": {
+                "az": "Daxili kommunikasiya şöbəsi",
+                "en": "Internal Communications Unit",
+                "ru": "Отдел внутренних коммуникаций"
+              },
+              "type": "unit"
+            }
+          ]
+        },
+        {
+          "title": {
+            "az": "Katiblik şöbəsi",
+            "en": "Secretariat Unit",
+            "ru": "Секретариат"
+          },
+          "type": "department"
+        },
+        {
+          "title": {
+            "az": "Daxili nəzarət və monitorinq departamenti",
+            "en": "Internal Control and Monitoring Department",
+            "ru": "Департамент внутреннего контроля и мониторинга"
+          },
+          "type": "department",
+          "children": [
+            {
+              "title": {
+                "az": "Daxili nəzarət şöbəsi",
+                "en": "Internal Control Unit",
+                "ru": "Отдел внутреннего контроля"
+              },
+              "type": "unit"
+            },
+            {
+              "title": {
+                "az": "Monitorinq şöbəsi",
+                "en": "Monitoring Unit",
+                "ru": "Отдел мониторинга"
+              },
+              "type": "unit"
+            }
+          ]
+        },
+        {
+          "title": {
+            "az": "İnzibati-təsərrüfat işləri üzrə direktor müavini",
+            "en": "Deputy Director for Administrative Affairs",
+            "ru": "Заместитель директора по административно-хозяйственной работе"
+          },
+          "type": "deputy",
+          "children": [
+            {
+              "title": {
+                "az": "İnsan resursları departamenti",
+                "en": "Human Resources Department",
+                "ru": "Департамент кадровых ресурсов"
+              },
+              "type": "department",
+              "children": [
+                {
+                  "title": {
+                    "az": "Kadrlar şöbəsi",
+                    "en": "Personnel Unit",
+                    "ru": "Отдел кадров"
+                  },
+                  "type": "unit"
+                },
+                {
+                  "title": {
+                    "az": "İşə qəbul şöbəsi",
+                    "en": "Recruitment Unit",
+                    "ru": "Отдел приёма на работу"
+                  },
+                  "type": "unit"
+                }
+              ]
+            },
+            {
+              "title": {
+                "az": "Maliyyə departamenti",
+                "en": "Finance Department",
+                "ru": "Финансовый департамент"
+              },
+              "type": "department",
+              "children": [
+                {
+                  "title": {
+                    "az": "Büdcə və xərclərə nəzarət şöbəsi",
+                    "en": "Budget and Expense Control Unit",
+                    "ru": "Отдел бюджета и контроля расходов"
+                  },
+                  "type": "unit"
+                },
+                {
+                  "title": {
+                    "az": "Mühasibatlıq şöbəsi",
+                    "en": "Accounting Unit",
+                    "ru": "Бухгалтерия"
+                  },
+                  "type": "unit"
+                }
+              ]
+            },
+            {
+              "title": {
+                "az": "Hüquq departamenti",
+                "en": "Legal Department",
+                "ru": "Юридический департамент"
+              },
+              "type": "department",
+              "children": [
+                {
+                  "title": {
+                    "az": "Korporativ hüquq şöbəsi",
+                    "en": "Corporate Law Unit",
+                    "ru": "Отдел корпоративного права"
+                  },
+                  "type": "unit"
+                },
+                {
+                  "title": {
+                    "az": "Dövlət orqanları ilə iş şöbəsi",
+                    "en": "Government Relations Unit",
+                    "ru": "Отдел по работе с государственными органами"
+                  },
+                  "type": "unit"
+                }
+              ]
+            },
+            {
+              "title": {
+                "az": "Müraciətlərlə iş departamenti",
+                "en": "Citizen Appeals Department",
+                "ru": "Департамент по работе с обращениями"
+              },
+              "type": "department",
+              "children": [
+                {
+                  "title": {
+                    "az": "Vətəndaş müraciətləri şöbəsi",
+                    "en": "Citizen Appeals Unit",
+                    "ru": "Отдел обращений граждан"
+                  },
+                  "type": "unit"
+                },
+                {
+                  "title": {
+                    "az": "Ümumi şöbə",
+                    "en": "General Unit",
+                    "ru": "Общий отдел"
+                  },
+                  "type": "unit"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "side": {
+        "left": [
+          {
+            "title": {
+              "az": "Müşavir",
+              "en": "Advisor",
+              "ru": "Советник"
+            },
+            "type": "advisor"
+          },
+          {
+            "title": {
+              "az": "Müşavir",
+              "en": "Advisor",
+              "ru": "Советник"
+            },
+            "type": "advisor"
+          },
+          {
+            "title": {
+              "az": "Müşavir",
+              "en": "Advisor",
+              "ru": "Советник"
+            },
+            "type": "advisor"
+          }
+        ],
+        "right": [
+          {
+            "title": {
+              "az": "Etika komitəsi",
+              "en": "Ethics Committee",
+              "ru": "Комитет по этике"
+            },
+            "type": "committee"
+          },
+          {
+            "title": {
+              "az": "Elmi-metodik komitə",
+              "en": "Scientific and Methodological Committee",
+              "ru": "Научно-методический комитет"
+            },
+            "type": "committee"
+          }
+        ]
+      }
+    }
+  ],
+  "side": {
+    "left": [
+      {
+        "title": {
+          "az": "Audit komitəsi",
+          "en": "Audit Committee",
+          "ru": "Комитет по аудиту"
+        },
+        "type": "advisor"
+      },
+      {
+        "title": {
+          "az": "Daxili audit xidməti",
+          "en": "Internal Audit Service",
+          "ru": "Служба внутреннего аудита"
+        },
+        "type": "advisor"
+      }
+    ]
+  }
+}

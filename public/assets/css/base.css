@@ -1,0 +1,153 @@
+/* ==========================================================================
+   Base: design tokens, Bootstrap overrides, typography
+   ========================================================================== */
+
+:root {
+  /* Colors */
+  --color-primary: #0392ce;
+  --color-secondary: #7fbe27;
+  --color-text: #272727;
+  --color-muted: #9d9d9d;
+  --color-gray-500: #838e9e;
+  --color-surface: #f3f3f3;
+  --color-border: #e0e0e0;
+  --color-white: #fff;
+
+  /* Typography */
+  --font-base: "Roboto Condensed", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-article: "Poppins", var(--font-base);
+
+  /* Type scale */
+  --fs-hero: clamp(30px, 3.4vw, 42px);
+  --fs-title: clamp(24px, 2.4vw, 30px);
+  --fs-subtitle: clamp(20px, 1.8vw, 24px);
+  --fs-lead: 18px;
+  --fs-small: 14px;
+
+  /* Shape */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+
+  /* Layout: 1280px content + 2 x 16px gutter */
+  --container-width: 1320px;
+  --section-space: 64px;
+
+  /* Bootstrap theme overrides */
+  --bs-body-font-family: var(--font-base);
+  --bs-body-font-size: 1rem;
+  --bs-body-line-height: 1.6;
+  --bs-body-color: var(--color-text);
+  --bs-primary: var(--color-primary);
+  --bs-primary-rgb: 3, 146, 206;
+  --bs-secondary: var(--color-secondary);
+  --bs-secondary-rgb: 127, 190, 39;
+  --bs-link-color: var(--color-primary);
+  --bs-link-hover-color: var(--color-primary);
+  --bs-link-color-rgb: 3, 146, 206;
+  --bs-link-hover-color-rgb: 3, 146, 206;
+}
+
+/* 1280px of content on desktop; 20px side padding on phones */
+.container {
+  --bs-gutter-x: 40px;
+  max-width: var(--container-width);
+}
+
+body {
+  background: var(--color-white);
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+.text-primary-brand {
+  color: var(--color-primary);
+}
+
+/* ---------- Buttons ----------
+   One shape for every button: same size, radius and 1px border.
+   .btn-brand            primary   (green)
+   .btn-secondary-brand  secondary (blue)                                */
+
+.btn {
+  --bs-btn-padding-x: 28px;
+  --bs-btn-padding-y: 12px;
+  --bs-btn-font-size: 16px;
+  --bs-btn-font-weight: 500;
+  --bs-btn-line-height: 1.25;
+  --bs-btn-border-width: 1px;
+  --bs-btn-border-radius: var(--radius-sm);
+  --bs-btn-focus-box-shadow: 0 0 0 0.2rem rgba(3, 146, 206, 0.25);
+}
+
+.btn-brand {
+  --bs-btn-color: var(--color-white);
+  --bs-btn-bg: var(--color-secondary);
+  --bs-btn-border-color: #66a01a;
+  --bs-btn-hover-color: var(--color-white);
+  --bs-btn-hover-bg: #70ab20;
+  --bs-btn-hover-border-color: #5a8f16;
+  --bs-btn-active-color: var(--color-white);
+  --bs-btn-active-bg: #669b1d;
+  --bs-btn-active-border-color: #5a8f16;
+}
+
+.btn-secondary-brand {
+  --bs-btn-color: var(--color-white);
+  --bs-btn-bg: var(--color-primary);
+  --bs-btn-border-color: #0279ab;
+  --bs-btn-hover-color: var(--color-white);
+  --bs-btn-hover-bg: #0284b8;
+  --bs-btn-hover-border-color: #026a95;
+  --bs-btn-active-color: var(--color-white);
+  --bs-btn-active-bg: #0279ab;
+  --bs-btn-active-border-color: #026a95;
+}
+
+/* ---------- Page layout helpers ---------- */
+
+.page {
+  padding-bottom: 66px;
+}
+
+.section {
+  padding-block: var(--section-space);
+}
+
+.section--surface {
+  background: var(--color-surface);
+}
+
+@media (max-width: 991.98px) {
+  :root {
+    --section-space: 44px;
+  }
+}
+
+/* ---------- Accessibility ---------- */
+
+.skip-link:focus {
+  position: fixed;
+  top: 8px;
+  left: 8px;
+  z-index: 2000;
+  padding: 8px 16px;
+  color: var(--color-text);
+  background: var(--color-white);
+  border-radius: var(--radius-sm);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
