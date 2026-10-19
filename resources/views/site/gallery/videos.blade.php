@@ -11,7 +11,7 @@
     <div data-reveal class="col-sm-6 col-lg-3 media-col">
       <a class="gallery-item gallery-item--video" href="{{ $video->youtube_url }}" data-fancybox="videos" data-caption="{{ $video->title }}">
         <img src="{{ $video->thumbnailUrl() }}" width="298" height="230" loading="lazy" alt="{{ $video->title }}">
-        <span class="gallery-item__play"></span>
+        <span class="gallery-item__play">@include('site.partials.svg-play')</span>
       </a>
     </div>
   @endforeach

@@ -34,6 +34,12 @@ class SettingController extends Controller
                     continue;
                 }
 
+                if ($f['type'] === 'toggle') {
+                    Setting::put($key, $request->boolean($key) ? '1' : '0');
+
+                    continue;
+                }
+
                 if (! empty($f['translatable'])) {
                     $vals = [];
                     foreach (array_keys(locales()) as $loc) {

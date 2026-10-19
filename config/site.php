@@ -11,13 +11,13 @@ return [
 
     /*
      * Editable site settings (admin: "Ümumi parametrlər").
-     * type: text | textarea | image | url ; translatable values are stored per language.
+     * type: text | textarea | image | url | toggle ; image fields may set a 'default' asset shown until one is uploaded; translatable values are stored per language.
      */
     'settings' => [
         'Ümumi' => [
             ['key' => 'site_name', 'label' => 'Sayt adı', 'type' => 'text', 'translatable' => true],
             ['key' => 'site_short_name', 'label' => 'Qısa ad', 'type' => 'text'],
-            ['key' => 'logo', 'label' => 'Loqo', 'type' => 'image'],
+            ['key' => 'logo', 'label' => 'Sayt ikonu (favicon) və SEO loqosu', 'type' => 'image', 'default' => 'assets/img/logo.png'],
             ['key' => 'og_image', 'label' => 'Sosial şəbəkə şəkli (OG, 1200x630)', 'type' => 'image'],
             ['key' => 'meta_description', 'label' => 'Əsas SEO təsviri', 'type' => 'textarea', 'translatable' => true],
             ['key' => 'footer_copy', 'label' => 'Footer yazısı', 'type' => 'text', 'translatable' => true],

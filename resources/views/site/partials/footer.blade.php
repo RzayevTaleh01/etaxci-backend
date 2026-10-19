@@ -1,6 +1,4 @@
 @php
-    $logo = media_url(setting('logo')) ?: asset('assets/img/logo.png');
-    $shortName = setting('site_short_name', 'ETACXİ');
     $phones = array_values(array_filter(array_map('trim', preg_split('/\R/', (string) setting('phones', '')))));
 @endphp
 <footer class="site-footer">
@@ -36,7 +34,7 @@
       </div>
     </div>
     <div class="site-footer__bar">
-      <a href="{{ url('/'.app()->getLocale()) }}"><img class="site-footer__logo" src="{{ $logo }}" width="60" height="60" alt="{{ $shortName }}"></a>
+      @include('site.partials.logos', ['area' => 'footer', 'class' => 'site-footer__logo'])
       <ul class="social-list">
         @include('site.partials.social', ['maskId' => 'f'])
       </ul>

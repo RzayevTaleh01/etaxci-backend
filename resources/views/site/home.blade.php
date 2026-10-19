@@ -1,6 +1,9 @@
 @extends('site.layouts.app')
 
 @section('title', '')
+@if ($photos->isNotEmpty())
+  @section('fancybox', '1')
+@endif
 
 @section('head')
   @if ($sliders->first()?->image)
@@ -71,6 +74,7 @@
   </section>
   @endif
 
+  {{-- Rəhbərlik bölməsi müvəqqəti gizlədilib
   @if ($leader)
   <section class="section">
     <div class="container">
@@ -90,6 +94,7 @@
     </div>
   </section>
   @endif
+  --}}
 
   @if ($featured)
   <section class="section section--surface">
@@ -126,6 +131,31 @@
             </article>
           @endforeach
         </div>
+      </div>
+    </div>
+  </section>
+  @endif
+
+  @if ($photos->isNotEmpty())
+  <section class="section">
+    <div class="container">
+      <div data-reveal class="section-heading">
+        <h2 class="section-heading__title">{{ t('gallery') }}</h2>
+        <span class="section-heading__line" aria-hidden="true"></span>
+        <a class="section-heading__link" href="{{ localized_url('/gallery') }}">{{ t('read_more') }} @include('site.partials.svg-arrow')</a>
+      </div>
+      <div data-reveal class="thumb-strip thumb-strip--home" data-strip>
+        <div class="thumb-strip__track" data-strip-track>
+          @foreach ($photos as $photo)
+            <a class="thumb-strip__item" href="{{ media_url($photo->image) }}" data-fancybox="home-photos" data-caption="{{ $photo->title }}"><img class="thumb-strip__image" src="{{ media_url($photo->image) }}" loading="lazy" alt="{{ $photo->title }}"></a>
+          @endforeach
+        </div>
+        @if ($photos->count() > 4)
+          <div class="thumb-strip__arrows">
+            <button class="round-arrow" type="button" data-strip-prev aria-label="{{ t('prev') }}"><img src="{{ asset('assets/icons/arrow-left.svg') }}" alt=""></button>
+            <button class="round-arrow round-arrow--next" type="button" data-strip-next aria-label="{{ t('next') }}"><img src="{{ asset('assets/icons/arrow-left.svg') }}" alt=""></button>
+          </div>
+        @endif
       </div>
     </div>
   </section>

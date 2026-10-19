@@ -17,11 +17,36 @@
   gap: 24px;
 }
 
+.site-logos {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Logo height comes from admin ("Loqolar") through --logo-h; width follows the image. */
 .site-logo {
   display: block;
-  width: 60px;
-  height: 60px;
+  width: auto;
+  max-width: 260px;
+  height: var(--logo-h, 84px);
   object-fit: contain;
+}
+
+/* Badge logos (e.g. the ministry emblem) sit in a white circle over the home hero.
+   The wide emblem is sized to fit inside the circle so its caption is not clipped. */
+.site-logo--badge {
+  width: var(--logo-h, 84px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border-radius: 50%;
+}
+
+.site-logo--badge img {
+  display: block;
+  width: 86%;
+  height: auto;
 }
 
 .site-nav__actions {
@@ -567,6 +592,24 @@ a.media-card:hover .media-card__title {
   border-radius: 5.658px;
 }
 
+/* Home page gallery: four larger photos per view, arrows side by side below on the right */
+.thumb-strip__arrows {
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.thumb-strip--home .thumb-strip__item {
+  flex-basis: calc((100% - 72px) / 4);
+  min-width: 240px;
+}
+
+.thumb-strip--home .thumb-strip__image {
+  aspect-ratio: 298 / 230;
+  border-radius: 8px;
+}
+
 .round-arrow {
   display: inline-flex;
   align-items: center;
@@ -744,9 +787,27 @@ a.media-card:hover .media-card__title {
 
 .site-footer__logo {
   display: block;
-  width: 48px;
-  height: 48px;
+  width: auto;
+  max-width: 260px;
+  height: var(--logo-h, 72px);
   object-fit: contain;
+}
+
+/* On white backgrounds (footer, inner-page header, mobile menu panel) badge logos drop the circle
+   and show at full width so their caption stays readable */
+.site-footer__logo.site-logo--badge,
+.site-header:not(.site-header--overlay) .site-logo--badge,
+.site-header .offcanvas-header .site-logo--badge {
+  width: auto;
+  border-radius: 0;
+  background: none;
+}
+
+.site-footer__logo.site-logo--badge img,
+.site-header:not(.site-header--overlay) .site-logo--badge img,
+.site-header .offcanvas-header .site-logo--badge img {
+  width: auto;
+  height: 100%;
 }
 
 .site-footer__copy {
@@ -872,9 +933,17 @@ a.media-card:hover .media-card__title {
     padding-block: 18px;
   }
 
+  /* Phones and tablets: header logos at ~70% of the admin height */
   .site-header .site-logo {
-    width: 46px;
-    height: 46px;
+    height: calc(var(--logo-h, 84px) * 0.7);
+  }
+
+  .site-header .site-logo--badge {
+    width: calc(var(--logo-h, 84px) * 0.7);
+  }
+
+  .site-header .site-logos {
+    gap: 12px;
   }
 
   .site-nav__actions {

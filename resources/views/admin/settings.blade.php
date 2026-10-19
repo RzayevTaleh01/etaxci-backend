@@ -26,8 +26,17 @@
                 $raw = $values[$key] ?? null;
             @endphp
             <div class="col-12 {{ in_array($f['type'], ['textarea']) ? '' : 'col-md-6' }}">
+              @if ($f['type'] === 'toggle')
+                <div class="form-check form-switch mt-md-4">
+                  <input type="hidden" name="{{ $key }}" value="0">
+                  <input class="form-check-input" type="checkbox" role="switch" name="{{ $key }}" value="1" id="tg-{{ $key }}" @checked(old($key, $raw ?? '1') !== '0')>
+                  <label class="form-check-label fw-semibold" for="tg-{{ $key }}">{{ $f['label'] }}</label>
+                </div>
+              @else
               <label class="form-label fw-semibold">{{ $f['label'] }}</label>
-              @if (! empty($f['translatable']))
+              @endif
+              @if ($f['type'] === 'toggle')
+              @elseif (! empty($f['translatable']))
                 @foreach (locales() as $code => $name)
                   <div class="lang-pane" data-lang="{{ $code }}">
                     @php($v = old("{$key}.{$code}", is_array($raw) ? ($raw[$code] ?? '') : ''))
@@ -39,8 +48,10 @@
                   </div>
                 @endforeach
               @elseif ($f['type'] === 'image')
+                @php($preview = $raw ? media_url($raw) : (isset($f['default']) ? asset($f['default']) : ''))
                 <div data-image-field>
-                  <img class="img-preview mb-2 {{ $raw ? '' : 'd-none' }}" src="{{ $raw ? media_url($raw) : '' }}" alt="">
+                  <img class="img-preview mb-2 {{ $preview ? '' : 'd-none' }}" src="{{ $preview }}" alt="">
+                  @if (! $raw && $preview)<div class="form-text mb-2">Standart loqo göstərilir. Yenisini yükləyərək dəyişə bilərsiniz.</div>@endif
                   <input class="form-control" type="file" name="{{ $key }}" accept="image/*">
                   @if ($raw)
                     <div class="form-check mt-2"><input class="form-check-input" type="checkbox" name="remove_{{ $key }}" value="1" id="rm-{{ $key }}" data-remove><label class="form-check-label" for="rm-{{ $key }}">Şəkli sil</label></div>

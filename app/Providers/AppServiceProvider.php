@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use App\Models\MenuItem;
+use App\Models\SiteLogo;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
@@ -31,6 +32,16 @@ class AppServiceProvider extends ServiceProvider
                 $view->with('headerMenu', $load('header'))->with('footerMenu', $load('footer'));
             } catch (\Throwable) {
                 $view->with('headerMenu', collect())->with('footerMenu', collect());
+            }
+
+            try {
+                $logos = SiteLogo::active()->ordered()->get();
+                $view->with('siteLogos', [
+                    'header' => $logos->whereIn('placement', ['both', 'header'])->values(),
+                    'footer' => $logos->whereIn('placement', ['both', 'footer'])->values(),
+                ]);
+            } catch (\Throwable) {
+                $view->with('siteLogos', []);
             }
         });
     }

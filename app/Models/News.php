@@ -27,6 +27,12 @@ class News extends Model
         ];
     }
 
+    protected static function booted(): void
+    {
+        // A news item without a date is dated when saved, so it never drops out of date-ordered lists.
+        static::saving(fn (News $news) => $news->published_at ??= now());
+    }
+
     public function category()
     {
         return $this->belongsTo(NewsCategory::class, 'news_category_id');

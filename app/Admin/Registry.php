@@ -14,6 +14,7 @@ use App\Admin\Resources\PageResource;
 use App\Admin\Resources\PartnerResource;
 use App\Admin\Resources\PersonResource;
 use App\Admin\Resources\ReceptionResource;
+use App\Admin\Resources\SiteLogoResource;
 use App\Admin\Resources\SliderResource;
 use App\Admin\Resources\StructureNodeResource;
 use App\Admin\Resources\UserResource;
@@ -35,6 +36,7 @@ class Registry
             FaqResource::class,
             ReceptionResource::class,
             PartnerResource::class,
+            SiteLogoResource::class,
             GalleryPhotoResource::class,
             GalleryVideoResource::class,
             MenuItemResource::class,

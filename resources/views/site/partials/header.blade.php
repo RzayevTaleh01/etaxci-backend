@@ -1,13 +1,11 @@
 @php
     $locale = app()->getLocale();
-    $logo = media_url(setting('logo')) ?: asset('assets/img/logo.png');
     $searchIcon = asset($overlay ? 'assets/icons/search-light.svg' : 'assets/icons/search.svg');
-    $shortName = setting('site_short_name', 'ETACXİ');
 @endphp
 <header class="site-header{{ $overlay ? ' site-header--overlay' : '' }}">
   <div class="container">
     <nav class="navbar navbar-expand-xl">
-      <a class="navbar-brand m-0" href="{{ url('/'.$locale) }}"><img class="site-logo" src="{{ $logo }}" width="60" height="60" alt="{{ $shortName }}"></a>
+      <div class="navbar-brand m-0">@include('site.partials.logos', ['area' => 'header', 'class' => 'site-logo'])</div>
       <div class="site-nav__actions d-xl-none">
         <button class="site-nav__search d-xl-none" type="button" data-bs-toggle="collapse" data-bs-target="#searchPanel" aria-expanded="false" aria-controls="searchPanel" aria-label="{{ t('search') }}"><img src="{{ $searchIcon }}" width="24" height="24" alt=""></button>
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mainNav" aria-controls="mainNav" aria-label="{{ t('open_menu') }}">
@@ -16,7 +14,7 @@
       </div>
       <div class="offcanvas offcanvas-start" tabindex="-1" id="mainNav" aria-label="{{ t('main_menu') }}">
         <div class="offcanvas-header d-xl-none">
-          <img class="site-logo" src="{{ $logo }}" width="60" height="60" alt="{{ $shortName }}">
+          @include('site.partials.logos', ['area' => 'header', 'class' => 'site-logo'])
           <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#mainNav" aria-label="{{ t('close') }}"></button>
         </div>
         <div class="offcanvas-body">
